@@ -1,0 +1,20 @@
+/*Leia a hora inicial, minuto inicial, hora final e minuto final de um jogo. A seguir calcule a duração do jogo.
+
+Obs: O jogo tem duração mínima de um (1) minuto e duração máxima de 24 horas.*/
+
+#include <iostream>
+using namespace std;
+int main (){
+   
+    int hi, hf, mi, mf, jogo;
+   
+    cin >> hi >> mi >> hf >> mf;
+   
+    jogo = (hf * 60 + mf) - (hi * 60 + mi);
+   
+    if (jogo <= 0){
+        jogo += 60*24;
+    }
+   
+    cout << "O JOGO DUROU " << jogo/60 << " HORA(S) E " << jogo%60 << " MINUTO(S)" << endl;
+}
