@@ -1,0 +1,60 @@
+/*Leia 3 valores de ponto flutuante A, B e C e ordene-os em ordem decrescente, de modo que o lado A representa o maior dos 3 lados. A seguir, determine o tipo de triângulo que estes três lados formam, com base nos seguintes casos, sempre escrevendo uma mensagem adequada:
+se A ≥ B+C, apresente a mensagem: NAO FORMA TRIANGULO
+se A2 = B2 + C2, apresente a mensagem: TRIANGULO RETANGULO
+se A2 > B2 + C2, apresente a mensagem: TRIANGULO OBTUSANGULO
+se A2 < B2 + C2, apresente a mensagem: TRIANGULO ACUTANGULO
+se os três lados forem iguais, apresente a mensagem: TRIANGULO EQUILATERO
+se apenas dois dos lados forem iguais, apresente a mensagem: TRIANGULO ISOSCELES*/
+
+#include <iostream>
+using namespace std;
+int main (){
+   
+    double a, b, c, aux;
+   
+    cin >> a >> b >> c;
+   
+    if(a < b){
+        aux = a;
+        a = b;
+        b = aux;
+    }
+    if(b < c){
+        aux = b;
+        b = c;
+        c = aux;
+    }
+    if (a < b){
+        aux = a;
+        a = b;
+        b = aux;
+    }
+   
+        if(a >= b + c){
+            cout << "NAO FORMA TRIANGULO" << endl;
+        }
+       
+        else{
+                       
+        if(a * a == b * b +  c * c){
+            cout << "TRIANGULO RETANGULO" << endl;
+        }
+       
+        if(a * a > b * b + c * c){
+            cout << "TRIANGULO OBTUSANGULO" << endl;
+        }
+                           
+        if(a * a < b * b + c * c){
+            cout << "TRIANGULO ACUTANGULO" << endl;
+        }
+                   
+        if(a == b and b == c){
+            cout << "TRIANGULO EQUILATERO" << endl;
+        }
+       
+        else if(a == b or b == c or a == c){
+                cout << "TRIANGULO ISOSCELES" << endl;
+        }
+                       
+        }
+}
